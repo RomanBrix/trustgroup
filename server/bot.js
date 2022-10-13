@@ -3,7 +3,7 @@ import { Telegraf } from 'telegraf'
 import { Low, JSONFile } from 'lowdb'
 // import LocalSession  from 'telegraf-session-local';
 
-const BOT_TOKEN = '5160481843:AAFqE83REo_13bRlz907oQBQZwFWpDsLqcM'
+const BOT_TOKEN = '#'
 
 const file = './users.json';
 const adapter = new JSONFile(file)
