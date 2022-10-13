@@ -1,0 +1,145 @@
+.poland-es{
+    @import './firstBlock.scss';
+
+
+    .big-list{
+        .container{
+            ul{
+                list-style: none;
+                padding: 0;
+                li{
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content:flex-start;
+                    margin-bottom: 20px;
+                    .counter{
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $white;
+                        margin-right: 10px;
+                        position: relative;
+                        box-sizing: border-box;
+                    span{
+                        position: relative;
+                        z-index: 1;
+                        font-weight: 700;
+                        width: 30px;
+                        text-align: center;
+                    }
+                    
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 30px;
+                        height: 30px;
+                        background: $main_blue;
+                        left: 0px;
+                        top: 0;
+                        border-radius: 50%;
+                        z-index: 0;
+                    }
+                    }
+                    .list-info{
+                        .headline{
+                            line-height: 1.36em;
+                            font-size: 18px;
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                        }
+                        .info{
+                            text-indent: 0;
+                            margin-left: 0;
+                            width: 100%;
+                            margin-top: 10px;
+                            line-height: 1.36em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+    .how-to{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-sizing: border-box;
+        padding: 25px;
+        .container{
+            h1{
+                color: $white;
+            }
+            p{
+                color: #fff;
+                font-size: 18px;
+                line-height: 1.36;
+                margin: 20px 0;
+            }
+            .how-to-blocks-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @media (max-width:767px){
+                    flex-direction: column;
+                }
+                
+                .block{
+                    width: 32%;
+                    box-sizing: border-box;
+                    height: 300px;
+                    max-width: 335px;
+                    background-color: rgba(255,255,255,.25);
+                    padding: 30px 10px 30px;
+                    margin: 0 auto 25px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    @media (max-width:767px){
+                        width: 100%;
+                    }
+                    .img{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 20px;
+                        img{
+                            height:  80px;
+
+                        }
+                    }
+
+                    .info{
+                        position: relative;
+                        text-align: center;
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: normal;
+                        position: relative;
+                        margin: 0;
+                        color: $white;
+                        box-sizing: border-box;
+                        padding-top: 10px;
+
+                        &::before{
+                            content: '';
+                            top: 0;
+                            left: 0;
+                            height: 1px;
+                            background: #fff;
+                            position: absolute;
+                            // margin-bottom: 10px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

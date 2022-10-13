@@ -1,0 +1,20 @@
+.chernogoria{
+    
+    .block-back-bg{
+        background: #E2EDF6;
+        text-align: center;
+        .container{
+            h1{
+                text-align: center;
+                width: 100%;
+                background: $dark_blue;
+                box-sizing: border-box;
+                color: $white;
+                padding: 7px 0;
+                margin-top: -22px;
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.intro-contact{
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        gap: 0 0;
+        box-sizing: border-box;
+        padding: 25px 0;
+        @media (max-width:767px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 15px 10px;
+        }
+
+        .left{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media (max-width:767px){
+                margin-bottom: 15px;
+            }
+            h1{
+                text-align: center;
+                margin: 0;
+                color: #fff;
+                line-height: 1.2;
+                font-weight: 700;
+                width: 420px;
+                letter-spacing: -1px;
+                // padding-right: 120px;
+                text-align: center;
+                text-shadow: 0 2px 6px #5a5a5a;
+            }
+            img{
+                position: absolute;
+                left: 10px;
+                bottom: 0;
+                width: 100%;
+                opacity: .89;
+                @media (max-width:1200px){
+                    width: 100%;
+                    bottom: 0%;
+                    left: 55%;
+                    transform: translate(-50%,-50%);
+                }
+                @media (max-width:767px){
+                    display: none;
+                }
+            }
+        }
+        .right{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

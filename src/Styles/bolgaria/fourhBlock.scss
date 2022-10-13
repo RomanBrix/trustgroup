@@ -1,0 +1,51 @@
+.fetures{
+    background: #fff;
+    .container{
+        padding: 25px 0;
+        .fetures-container{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 25px 0;
+            @media (max-width:767px){
+                flex-direction: column;
+                width: 100%;
+            }
+            .feture{
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                @media (max-width:767px){
+                    flex-direction: column;
+                    width: 100%;
+                }
+                .img{
+                    margin-bottom: 10px;
+                    img{
+                        height:  90px;
+                    }
+                    
+                }
+                .head{
+                    border-top: 2px solid #cccccd;
+                    text-align: center;
+                    box-sizing: border-box;
+                    padding: 15px;
+                    width: 85%;
+                }
+            }
+        }
+    }
+}
+
+
+.dark-fetures{
+    background: $white_grey;
+    box-shadow: inset 0 4px 8px -3px rgb(225 225 225 / 75%);
+    border-bottom: 1px solid #cccccd;
+}

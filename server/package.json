@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "go": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "https": "^1.0.0",
+    "lowdb": "^3.0.0",
+    "telegraf": "^4.7.0",
+    "telegraf-session-local": "^2.1.0"
+  },
+  "nodemonConfig": {
+    "ext": "js",
+    "ignore": [
+      "*.test.ts",
+      "db/*",
+      "users.json"
+    ],
+    "delay": "2"
+  }
+}

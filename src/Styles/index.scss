@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+$main_blue: #3f51b5;
+$second_blue: #03a9f4;
+$dark_blue: #101a7e;
+$white: #fff;
+$white_grey: #f1f1f1;
+$main_red: #ff5656;
+$second_red: #f64242;;
+
+
+
+
+
+html{
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    background: #f4f4f4;
+    body{
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+
+        #root{
+        width: 100%;
+        max-width: 100%;
+
+            .centered{    
+                max-width: 100%;
+
+                font-family: 'Roboto', sans-serif;;
+                display: flex;
+                font-weight: 400;
+                align-items: flex-start;
+                justify-content: center;
+                text-size-adjust: 100%;
+                .container{
+                    width: 1200px;
+                    max-width: 1200px;
+                    min-width: 1200px;
+                    
+                }
+                @media (max-width:1200px){
+                    .container{
+                        width: 1024px;
+                        min-width: 1024px;
+                        max-width: 1024px;
+                    }
+                  }
+                  @media (max-width:1023px){
+                      .container{
+                          width: 768px;
+                          min-width: 768px;
+                          max-width: 768px;
+                      }
+                  }
+        
+                  @media (max-width:767px){
+                      .container{
+                          width: 375px;
+                          min-width: 375px;
+                          max-width: 375px;
+                      }
+                  }
+            }
+            
+
+            @import './layouts/header.scss';
+            @import './layouts/footer.scss';
+            @import './main/index.scss';
+            @import './rumunia/index.scss';
+            @import './bolgaria/index.scss';
+            @import './poland/index.scss';
+            @import './chernogoria/index.scss';
+            @import './contact/index.scss';
+            @import './qa/index.scss';
+            @import './leadRequest.scss';
+            .apostil-block {
+                min-height: 300px !important;
+                .container{
+                    flex-direction: row !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    min-height: 300px !important;
+                   
+                    h1{
+                        margin-right: 15px;
+                    }
+                    img{
+                        width: 350px;
+                    }
+                }
+            }
+
+        }
+    }
+}

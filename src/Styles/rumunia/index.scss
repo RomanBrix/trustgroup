@@ -1,0 +1,71 @@
+.rumunia-es{
+
+    .content-head{
+        color: $dark_blue;
+            font-size: 30px;
+            line-height: 38px;
+            text-align: center;
+            margin: 20px 0 40px;
+    }
+    .content-after-head{
+        line-height: 1.3;
+        margin: 20px 0;
+        font-size: 18px;
+    }
+
+    .pass-fetures{
+        .container{
+            padding: 25px 0;
+            margin-bottom: 25px;
+            .doc-describe-container{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                @media (max-width:767px){
+                    flex-direction: column;
+                }
+                .doc-describe-item{
+                    height: 700px;
+                    width: 48%;
+                    box-shadow: 0px 2px 13px 0px rgb(0 0 0 / 25%);
+                    width: 49%;
+                    padding: 30px;
+                    box-sizing: border-box;
+                    @media (max-width:767px){
+                        width: 100%;
+                        margin-bottom: 20px;
+                        height: auto;
+                    }
+                    .img{
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 10px;
+                        img{
+                            height: 300px;
+                            @media (max-width:1200px){
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                    .img-desc{
+                        font-size: 14px;
+                        color: #9f9e9e;
+                        text-align: center;
+                        margin-bottom: 10px;
+                    }
+                    .text-info{
+                        margin: 20px 0;
+                        font-size: 18px;
+                        line-height: 1.36;
+                    }
+
+                }
+            }
+        }
+    }
+    @import './blockOne.scss';
+    @import './blockTwo.scss';
+    @import './blockFour.scss';
+    @import './blockFive.scss';
+}
