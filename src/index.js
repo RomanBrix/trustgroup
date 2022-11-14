@@ -5,10 +5,13 @@ import './Styles/index.scss';
 
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
+import { TransalteProvider } from './hoc/TranslateProvider';
 
 ReactDOM.render(
   <BrowserRouter>
+  <TransalteProvider>
   <App />
+  </TransalteProvider>
   </BrowserRouter>,
   document.getElementById('root')
 );

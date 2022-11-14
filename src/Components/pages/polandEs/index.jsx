@@ -1,17 +1,24 @@
-import PolandFirstBlock from "./firstBlock"
-import PolandSecondBlock from "./secondBlock"
-
-
-
+import useTranslate from "../../../hook/useTranslate";
+import PolandFirstBlock from "./firstBlock";
+import PolandSecondBlock from "./secondBlock";
 
 function PolandEs(props) {
+    const {
+        translate: { PolEs },
+        language,
+    } = useTranslate();
     return (
         <div className="bolgaria-es rumunia-es poland-es">
-            <PolandFirstBlock/>
-            <PolandSecondBlock/>
+            <PolandFirstBlock
+                translate={PolEs.FirstBlock}
+                language={language}
+            />
+            <PolandSecondBlock
+                translate={PolEs.SecondBlock}
+                language={language}
+            />
         </div>
-    )
+    );
 }
 
-
-export default PolandEs
+export default PolandEs;

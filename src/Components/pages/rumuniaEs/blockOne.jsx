@@ -1,30 +1,32 @@
-import LeadRequest from "../leadRequest"
+import LeadRequest from "../leadRequest";
 
-
-function BlockOne(props) {
+function BlockOne({ translate, language }) {
     return (
         <>
-            <div className="intro centered" style={{backgroundImage: 'url(/src/rumunia/contact-bg.jpg)'}}>
+            <div
+                className="intro centered"
+                style={{ backgroundImage: "url(/src/rumunia/contact-bg.jpg)" }}
+            >
                 <div className="container">
                     <div className="left">
                         <img src="/src/rumunia/contact-col-bg.png" alt="" />
-                        <h1>Консультационная поддержка в вопросах гражданства ЕC</h1>
+                        <h1>{translate.head[language]}</h1>
                     </div>
                     <div className="right">
-                        <LeadRequest/>
+                        <LeadRequest />
                     </div>
                 </div>
             </div>
             <div className="text-block centered">
                 <div className="container">
-                    <h1>Преимущества румынского гражданства</h1>
-                    <p>Гражданство Румынии пользуется большой популярностью, короткие сроки и лояльные требования румынских программ разрешают легко обосноваться в Евросоюзе. Правительство страны разработало отдельную государственную программу для лиц румынского происхождения, которые могут документально доказать свою территориальную принадлежность к Румынии.</p>
-                    <p>Проживание в ЕС и наличие европейских документов, полученных по программе репатриации, не требует отказа от текущего гражданства. При данных условиях, во время пребывания на территории государства первого гражданства, Вы будете признаваться гражданином своей страны, а после пересечения границы – европейцем.</p>
-                    <p>Компания Immigration предоставляет консультационную поддержку и юридические консультации в вопросах, связанных с получением гражданства Румынии. Предлагаем ознакомиться с преимуществами румынского гражданства, которые будут вам доступны после получения данного статуса:</p>
+                    <h1>{translate.text1[language]}</h1>
+                    <p>{translate.text2[language]}</p>
+                    <p>{translate.text3[language]}</p>
+                    <p>{translate.text4[language]}</p>
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default BlockOne
+export default BlockOne;

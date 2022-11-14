@@ -1,37 +1,36 @@
 import LeadRequest from "../leadRequest";
 
-
-function BlockThree(props) {
+function BlockThree({ translate, language }) {
     return (
         <>
             <div className="text-block centered">
                 <div className="container">
-                    <p>Оформить румынское гражданство вправе лица, имеющие территориальную принадлежность к Румынии, о чем говорится в ст. 10 и ст. 11 Закона «О гражданстве Румынии». Для этого необходимо предоставить документальное подтверждение, на основе которого Министерство юстиции предоставит заявителю возможность получить гражданство Румынии по корням.</p>
-                    <p>Данные документы должны быть предоставлены в надлежащем виде, соответствовать требованиям румынского законодательства и содержать неопровержимые доказательства вашего происхождения. В таком случае Министерство рассмотрит прошение.</p>
-                    <p>Для Вашего удобства, наша компания предлагает воспользоваться выгодным предложением – приступить к изучению румынского языка в домашних условиях. Специально для Вас наша команда подготовила серию видеоуроков румынского языка, которые составлены опытными преподавателями, чтобы начать занятие – перейдите по ссылке.</p>
+                    <p>{translate.text1[language]}</p>
+                    <p>{translate.text2[language]}</p>
+                    <p>{translate.text3[language]}</p>
                     <div className="centeredImg">
-                        <img  src="/src/rumunia/01.jpg" alt="" />
+                        <img src="/src/rumunia/01.jpg" alt="" />
                     </div>
-                    <p>Основное преимущество репатриации над другими программами – заявитель может проживать на территории любой страны как до прохождения присяги, так и после. Вы вправе быть резидентом другого государства и не иметь статуса ВНЖ или ПМЖ в Румынии.</p>
+                    <p>{translate.text4[language]}</p>
                 </div>
             </div>
 
-
-
-            <div className="intro centered" style={{backgroundImage: 'url(/src/rumunia/contact-bg.jpg)'}}>
+            <div
+                className="intro centered"
+                style={{ backgroundImage: "url(/src/rumunia/contact-bg.jpg)" }}
+            >
                 <div className="container">
                     <div className="left">
                         <img src="/src/rumunia/contact-col-bg.png" alt="" />
-                        <h1>Консультационная поддержка в вопросах гражданства ЕC</h1>
+                        <h1>{translate.consult[language]}</h1>
                     </div>
                     <div className="right">
-                        <LeadRequest/>
+                        <LeadRequest />
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 }
-
 
 export default BlockThree;

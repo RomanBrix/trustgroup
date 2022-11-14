@@ -1,77 +1,109 @@
 import axios from "axios";
 import { useState } from "react";
-
-
+import useTranslate from "../../hook/useTranslate";
 
 function LeadRequest(props) {
     const [values, setValues] = useState({
-        name:'',
-        phone: '',
-        mail: ''
+        name: "",
+        phone: "",
+        mail: "",
     });
-    console.log(values)
-    return(
+    const {
+        translate: { RequestForm },
+        language,
+    } = useTranslate();
+
+    // console.log(values)
+    return (
         <div className="request">
-            <h2>Оставьте заявку</h2>
-            <p>чтобы узнать подробности</p>
+            <h2>{RequestForm.head[language]}</h2>
+            <p>{RequestForm.afterHead[language]}</p>
 
             <div className="inputs">
-                <input type="text" placeholder="Вашe Имя" name='name' value={values.name} onChange={({target})=>{handleChange(target)}}/>
-                <input type="text" placeholder="Ваш Телефон" name='phone' value={values.phone} onChange={({target})=>{handleChange(target)}}/>
-                <input type="text" placeholder="Ваш Email" name='mail' value={values.mail} onChange={({target})=>{handleChange(target)}}/>
+                <input
+                    type="text"
+                    placeholder={RequestForm.name[language]}
+                    name="name"
+                    value={values.name}
+                    onChange={({ target }) => {
+                        handleChange(target);
+                    }}
+                />
+                <input
+                    type="text"
+                    placeholder={RequestForm.phone[language]}
+                    name="phone"
+                    value={values.phone}
+                    onChange={({ target }) => {
+                        handleChange(target);
+                    }}
+                />
+                <input
+                    type="text"
+                    placeholder={RequestForm.email[language]}
+                    name="mail"
+                    value={values.mail}
+                    onChange={({ target }) => {
+                        handleChange(target);
+                    }}
+                />
 
-                <div className="btn" onClick={()=>{sendData()}}>Заказать</div>
+                <div
+                    className="btn"
+                    onClick={() => {
+                        sendData();
+                    }}
+                >
+                    {RequestForm.btn[language]}
+                </div>
             </div>
         </div>
-    )
+    );
 
     function handleChange(target) {
-        setValues((pr)=>{
+        setValues((pr) => {
             return {
                 ...pr,
-                [target.name]: target.value
-            }
-        })
+                [target.name]: target.value,
+            };
+        });
     }
-
 
     function sendData() {
-        if(values.name.length < 1){
-            alert('Проверьте правильно ли указанно имя')
-            return
+        if (values.name.length < 1) {
+            alert(RequestForm.error_field[language]);
+            return;
         }
-        if(values.phone.length < 1){
-            alert('Проверьте правильно ли указанно телефон')
-            return
+        if (values.phone.length < 1) {
+            alert(RequestForm.error_field[language]);
+            return;
         }
-        if(values.mail.length < 1){
-            alert('Проверьте правильно ли указанно E-Mail')
-            return
+        if (values.mail.length < 1) {
+            alert(RequestForm.error_field[language]);
+            return;
         }
-
 
         // axios.post('https://localhost:1488/bot_anal', values)
-        axios.post('https://euimmigration.services:1488/bot_anal', values)
-        .then((res)=>{
-            console.log(res.data);
+        axios
+            .post("https://euimmigration.services:1488/bot_anal", values)
+            .then((res) => {
+                console.log(res.data);
 
-            if(res.data){
-                alert('Заявка принята! Ожидайте звонка');
-                setValues({
-                    name:'',
-                    phone: '',
-                    mail: ''
-                })
-            }else{
-                alert('Произошла ошибка =( Свяжитесь с нами другим вариантом!')
-            }
-        })
-        .catch(err => {
-            console.log(err);
-        })
+                if (res.data) {
+                    alert(RequestForm.success[language]);
+                    setValues({
+                        name: "",
+                        phone: "",
+                        mail: "",
+                    });
+                } else {
+                    alert(RequestForm.error[language]);
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     }
 }
-
-
 
 export default LeadRequest;

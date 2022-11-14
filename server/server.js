@@ -14,7 +14,7 @@ const __dirname = path.resolve();
 //     optionsSuccessStatus: 200
 //   }
 var corsOptions = {
-    origin: 'site url',
+    origin: 'https://euimmigration.services',
     optionsSuccessStatus: 200
   }
 

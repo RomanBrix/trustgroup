@@ -1,103 +1,156 @@
 import { useNavigate } from "react-router-dom";
 import LeadRequest from "../leadRequest";
 
-
-
-
-function BlockFour(props) {
+function BlockFour({ translate, language }) {
     const navigate = useNavigate();
-    return(
+
+    const dataFoBlock = [
+        {
+            title: translate.block1.title[language],
+            text: translate.block1.text[language],
+            img: "stage-phone-icon.png",
+        },
+        {
+            title: translate.block2.title[language],
+            text: translate.block2.text[language],
+            img: "icon-ap2.png",
+        },
+        {
+            title: translate.block3.title[language],
+            text: translate.block3.text[language],
+            img: "stage-manager.png",
+        },
+        {
+            title: translate.block4.title[language],
+            text: translate.block4.text[language],
+            img: "stage-speaker.png",
+        },
+        {
+            title: translate.block5.title[language],
+            text: translate.block5.text[language],
+            img: "satge-file.png",
+        },
+    ];
+    return (
         <>
             <div className="block-four centered">
                 <div className="container">
-                    <h1>Гражданство Румынии: юридическая консультация</h1>
-                    <div className="afterhead">Мы предоставляем юридические консультации на каждом этапе процедуры:</div>
-                    {generateBlock()}
+                    <h1>{translate.head[language]}</h1>
+                    <div className="afterhead">
+                        {translate.afterHead[language]}
+                    </div>
+                    {generateBlock(dataFoBlock)}
                 </div>
             </div>
 
-            <div className="apostil centered" style={{backgroundImage: 'url(/src/rumunia/bg-info-rumunia.jpg)'}}>
+            <div
+                className="apostil centered"
+                style={{
+                    backgroundImage: "url(/src/rumunia/bg-info-rumunia.jpg)",
+                }}
+            >
                 <div className="container">
-                    <h2>Консультанты компании Immigration готовы предоставить дополнительную информацию об апостилировании документов</h2>
-                    <div className="btn" onClick={()=>{navigate('/Apostil')}}>Узнать больше</div>
+                    <h2>{translate.head2[language]}</h2>
+                    <div
+                        className="btn"
+                        onClick={() => {
+                            navigate("/Apostil");
+                        }}
+                    >
+                        {translate.btn[language]}
+                    </div>
                 </div>
             </div>
 
-
-            <div className="text-block centered" style={{background: '#f1f1f1', padding: '40px 0'}}>
+            <div
+                className="text-block centered"
+                style={{ background: "#f1f1f1", padding: "40px 0" }}
+            >
                 <div className="container">
-                    <h1>Какие документы нужны для румынского гражданства?</h1>
-                    <p>Список документов для румынского гражданства устанавливается требованиями действующего законодательства, а также внутренним регламентом, принятым Национальным управлением по гражданству (Autorității Naționale pentru Cetățenie).</p>
-                    <p>В данный момент регистрация заявки на восстановление гражданства проводится в online режиме, посредством официального сайта Национального управления по гражданству. В процессе регистрации Вы указываете личные данные – имя и фамилию, дату рождения, контактную информацию и адрес проживания. После этого, Вы выбираете региональное представительство ANC и запланировать дату подачи досье. 
-Какие документы понадобятся для румынского гражданства?</p>
+                    <h1>{translate.head3[language]}</h1>
+                    <p>{translate.text1[language]}</p>
+                    <p>{translate.text2[language]}</p>
                     <div className="mini-foto-text-container">
-                        <div className="block"> 
-                            <img src="/src/rumunia/doc_pass_full.svg" alt="" /> 
-                            <div className="headline">Внутренний и заграничный паспорта</div>
+                        <div className="block">
+                            <img src="/src/rumunia/doc_pass_full.svg" alt="" />
+                            <div className="headline">
+                                {translate.img1[language]}
+                            </div>
                         </div>
-                        <div className="block"> 
-                            <img src="/src/rumunia/doc_born-01.svg" alt="" /> 
-                            <div className="headline">Свидетельство о рождении</div>
+                        <div className="block">
+                            <img src="/src/rumunia/doc_born-01.svg" alt="" />
+                            <div className="headline">
+                                {translate.img2[language]}
+                            </div>
                         </div>
-                        <div className="block"> 
-                            <img src="/src/rumunia/doc_rings-01.svg" alt="" /> 
-                            <div className="headline">Свидетельство о браке родителей</div>
+                        <div className="block">
+                            <img src="/src/rumunia/doc_rings-01.svg" alt="" />
+                            <div className="headline">
+                                {translate.img3[language]}
+                            </div>
                         </div>
-                        
-                        <div className="block"> 
-                            <img src="/src/rumunia/doc_child-01.png" alt="" /> 
-                            <div className="headline">Свидетельства о рождении родителей</div>
+
+                        <div className="block">
+                            <img src="/src/rumunia/doc_child-01.png" alt="" />
+                            <div className="headline">
+                                {translate.img4[language]}
+                            </div>
                         </div>
-                        <div className="block"> 
-                            <img src="/src/rumunia/doc_marriage.svg" alt="" /> 
-                            <div className="headline">Свидетельства о рождении и браке бабушки и дедушки</div>
+                        <div className="block">
+                            <img src="/src/rumunia/doc_marriage.svg" alt="" />
+                            <div className="headline">
+                                {translate.img5[language]}
+                            </div>
                         </div>
-                        <div className="block"> 
-                            <img src="/src/rumunia/doc_prison-01.svg" alt="" /> 
-                            <div className="headline">Справка об отсутствии судимостей</div>
+                        <div className="block">
+                            <img src="/src/rumunia/doc_prison-01.svg" alt="" />
+                            <div className="headline">
+                                {translate.img6[language]}
+                            </div>
                         </div>
                     </div>
-                    <p>Также, если вместе с Вами заявление на предоставление гражданства Румынии подают Ваши дети, нужно предоставить их свидетельства о рождении. Обратите внимание: главным требованием к документам считается отсутствие изменений и следов ламинации.</p>
+                    <p>{translate.imgText[language]}</p>
                 </div>
             </div>
 
-
-
-            <div className="text-block centered" style={{background: '#f1f1f1', padding: '40px 0'}}>
+            <div
+                className="text-block centered"
+                style={{ background: "#f1f1f1", padding: "40px 0" }}
+            >
                 <div className="container">
-                    <h1>Проверка досара по номеру</h1>
-                    <p>Затем, как документы на получение румынского гражданства в полном объеме сформированы и переданы в представительство ANC, делу заявителя присваивается порядковый номер (досар), в соответствии с которым будет рассматриваться конкретное заявление.«Досар» — это регистрационный номер Вашего досье, находящегося в очереди на получение гражданства Румынии, каждому делу присваивается индивидуальный номер</p>
-                    <p>Персональные данные заявителей, которые подали досье с документами в региональное представительство ANC, вносятся в списки на получение румынского гражданства. Перечень кандидатов публикуется на официальном сайте ANC.</p>
-                    
-                    <p>Важно! Для клиентов нашей компании есть возможность проверить состояние DOSAR по номеру на странице проверки Досара.</p>
+                    <h1>{translate.head4[language]}</h1>
+                    <p>{translate.text3[language]}</p>
+                    <p>{translate.text4[language]}</p>
+                    <p>{translate.text5[language]}</p>
                 </div>
             </div>
 
-
-
-
-            <div className="intro centered" style={{backgroundImage: 'url(/src/rumunia/pedro-lastra-unsplash-rumun.png)'}}>
+            <div
+                className="intro centered"
+                style={{
+                    backgroundImage:
+                        "url(/src/rumunia/pedro-lastra-unsplash-rumun.png)",
+                }}
+            >
                 <div className="container">
                     <div className="left">
                         <img src="/src/rumunia/contact-col-bg.png" alt="" />
-                        <h1>Получите гражданство Румынии на законных основаниях</h1>
+                        <h1>{translate.consult[language]}</h1>
                     </div>
                     <div className="right">
-                        <LeadRequest/>
+                        <LeadRequest />
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 
-
-
-    function generateBlock(params) {
-        return dataFoBlock.map((item, index)=>{
+    function generateBlock(arr) {
+        return arr.map((item, index) => {
             return (
                 <div className="big-info-blocks" key={index}>
                     <div className="top-img">
-                        <div className="border-img"/>
+                        <div className="border-img" />
                         <div className="img">
                             <img src={`/src/rumunia/${item.img}`} alt="" />
                         </div>
@@ -107,39 +160,9 @@ function BlockFour(props) {
                         <div className="text">{item.text}</div>
                     </div>
                 </div>
-            )
-        })
+            );
+        });
     }
 }
-
-
-
-const dataFoBlock = [
-    {
-        title: 'Консультация юристов',
-        text: 'Юристы нашей компании для начала работы над Вашим досье проконсультируют Вас относительно законодательных требований , а также составят перечень необходимых документов и предоставят информацию о процедуре и действиях, которые будут предприняты в дальнейшем.',
-        img: 'stage-phone-icon.png'
-    },
-    {
-        title: 'Сбор документов и запись на подачу',
-        text: 'Дальнейший шаг — сбор документов, подтверждающих Ваше право на участие в программе репатриации. Наши сотрудники предоставят перечень необходимых документов, а также мы дадим информацию о том, как восстановить утраченные свидетельства территориальной принадлежности к Румынии..  После этого Вам следует пройти регистрацию на подачу посредством официального государственного ресурса.',
-        img: 'icon-ap2.png'
-    },
-    {
-        title: 'Подача документов на рассмотрение',
-        text: 'Документы, подтверждающие территориальную или этническую принадлежность заявителя, рассматриваются представителями Национального агентства по гражданству, которое расположено в столице Румынии, городе Бухаресте. Подача проходит с учётом личного присутствия заявителя по предварительной записи.',
-        img: 'stage-manager.png'
-    },
-    {
-        title: 'Подготовка к присяге',
-        text: 'После благополучной подачи у Вас будет свободное время для подготовки к присяге. Вам нужно выучить текст присяги, а также овладеть основами румынского языка и произношения. Для  успешной подготовки рекомендуется воспользоваться видеоуроками румынского языка или услугами репетитора.',
-        img: 'stage-speaker.png'
-    },
-    {
-        title: 'Сдача присяги и получение сертификата о гражданстве',
-        text: 'Уже после прохождения присяги на верность Румынии, а также краткого собеседования с уполномоченным представителем Национального агентства по гражданству, Вы получите сертификат о гражданстве, который предоставляет основание для оформления внутренних документов резидента.',
-        img: 'satge-file.png'
-    },
-]
 
 export default BlockFour;

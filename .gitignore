@@ -26,3 +26,4 @@ yarn-error.log*
 /server/cert.pem
 /server/privkey.pem
 /server/users.json
+/server/node_modules

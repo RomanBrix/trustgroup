@@ -1,178 +1,228 @@
 import LeadRequest from "../leadRequest";
 
-
-
-
-
-function RumuniaPassportFirstBlock(props) {
+function RumuniaPassportFirstBlock({ translate, language }) {
     return (
         <>
-            <div className="intro centered" style={{backgroundImage: 'url(/src/rumunia/contact-bg.jpg)'}}>
+            <div
+                className="intro centered"
+                style={{ backgroundImage: "url(/src/rumunia/contact-bg.jpg)" }}
+            >
                 <div className="container">
                     <div className="left">
                         <img src="/src/poland/contact-col-bg.png" alt="" />
-                        <h1>Паспорт Румынии - откройте новые перспективы для жизни в ЕС</h1>
+                        <h1>{translate.head[language]}</h1>
                     </div>
                     <div className="right">
-                        <LeadRequest/>
-
+                        <LeadRequest />
                     </div>
                 </div>
             </div>
 
-
-              {/* vtoroi block */}
+            {/* vtoroi block */}
             <div className="pass-fetures centered">
                 <div className="container">
-                    <h1 className="content-head">Паспорт Румынии</h1>
+                    <h1 className="content-head">
+                        {translate.passFeatures.head[language]}
+                    </h1>
                     <div className="doc-describe-container">
                         <div className="doc-describe-item">
-                            <div className="img"><img src="/src/rumunia/roman-id-card-img.jpg" alt="" /></div>
-                            <div className="img-desc">Фото внутреннего паспорта Румынии (булетина)</div>
+                            <div className="img">
+                                <img
+                                    src="/src/rumunia/roman-id-card-img.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="img-desc">
+                                {translate.passFeatures.imgDesc1[language]}
+                            </div>
                             <div className="text-info">
-                                <b>Внутренний паспорт Румынии (румынская ID-карта, булетин)</b> – это документ в виде пластиковой карты, в котором содержится информация о его владельце - гражданине Евросоюза. После оформления паспорта вы получаете официальный статус, делающий вас равным с гражданами Германии, Италии, Франции и других стран с развитой экономикой.
+                                {translate.passFeatures.text1[language]}
                             </div>
                         </div>
                         <div className="doc-describe-item">
-                            <div className="img"><img src="/src/rumunia/roman-foreign-pass-img.jpg" alt="" /></div>
-                            <div className="img-desc">Фото заграничного паспорта Румынии</div>
+                            <div className="img">
+                                <img
+                                    src="/src/rumunia/roman-foreign-pass-img.jpg"
+                                    alt=""
+                                />
+                            </div>
+                            <div className="img-desc">
+                                {translate.passFeatures.imgDesc2[language]}
+                            </div>
                             <div className="text-info">
-                                <b>Заграничный паспорт Румынии</b> - это документ, в котором указана информация для идентификации владельца – фотография, ФИО, дата рождения, пол, подпись. Документ оснащен микрочипом, в котором продублированы личные данные, а также содержится электронная копия подписи и отпечатков пальцев.
+                                {translate.passFeatures.text2[language]}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
-              <div className="info-blocks centered">
+            <div className="info-blocks centered">
                 <div className="container">
                     <div className="info-block">
                         <div className="left">
-                            <p>Паспорт Румынии позволяет свободно перемещаться в пределах Евросоюза, а также путешествовать по безвизовому режиму в большинство стран за пределами ЕС</p>
+                            <p>{translate.infoBlocks.text1[language]}</p>
                         </div>
-                        <div className="right"><img src="/src/rumunia/around-icon.png" alt="" /></div>
+                        <div className="right">
+                            <img src="/src/rumunia/around-icon.png" alt="" />
+                        </div>
                     </div>
                     <div className="info-block">
                         <div className="left">
-                            <p>Граждане Румынии могут постоянно проживать в любой из стран Европейского союза</p>
+                            <p>{translate.infoBlocks.text2[language]}</p>
                         </div>
-                        <div className="right"><img src="/src/rumunia/house-icon.png" alt="" /></div>
+                        <div className="right">
+                            <img src="/src/rumunia/house-icon.png" alt="" />
+                        </div>
                     </div>
                     <div className="info-block">
                         <div className="left">
-                            <p>С румынским гражданством можно законно трудоустраиваться в любую компанию, зарегистрированную на территории ЕС</p>
+                            <p>{translate.infoBlocks.text3[language]}</p>
                         </div>
-                        <div className="right"><img src="/src/rumunia/worldwide-icon.png" alt="" /></div>
+                        <div className="right">
+                            <img src="/src/rumunia/worldwide-icon.png" alt="" />
+                        </div>
                     </div>
                     <div className="info-block">
                         <div className="left">
-                            <p>Евросоюз обеспечивает жителям высокий уровень социальных гарантий, а также возможность получать квалифицированную медицинскую помощь</p>
+                            <p>{translate.infoBlocks.text4[language]}</p>
                         </div>
-                        <div className="right"><img src="/src/rumunia/medical-history-icon.png" alt="" /></div>
+                        <div className="right">
+                            <img
+                                src="/src/rumunia/medical-history-icon.png"
+                                alt=""
+                            />
+                        </div>
                     </div>
                     <div className="info-block">
                         <div className="left">
-                            <p>Иммиграция в Румынию откроет доступ к получению качественного образования в лучших европейских вузах</p>
+                            <p>{translate.infoBlocks.text5[language]}</p>
                         </div>
-                        <div className="right"><img src="/src/rumunia/student-icon.png" alt="" /></div>
+                        <div className="right">
+                            <img src="/src/rumunia/student-icon.png" alt="" />
+                        </div>
                     </div>
                     <div className="info-block">
                         <div className="left">
-                            <p>Предпринимателям румынский паспорт позволит приобрести заграничную недвижимость и оформить кредит с низкой процентной ставкой</p>
+                            <p>{translate.infoBlocks.text6[language]}</p>
                         </div>
-                        <div className="right"><img src="/src/rumunia/percent-icon.png" alt="" /></div>
+                        <div className="right">
+                            <img src="/src/rumunia/percent-icon.png" alt="" />
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div className="text-block centered">
                 <div className="container">
-                <p className="content-after-head">Что дает румынский паспорт своему владельцу? Одно из важных преимуществ паспорта Румынии – право сохранить за собой гражданство родной страны. Эта опция регламентируется положениями законодательства Румынии.</p>
-                    <p className="content-after-head">Таким образом, пребывая в родной стране, заявитель является ее законным гражданином, а после пересечения европейской границы соблюдает нормы законодательства ЕС как владелец румынского паспорта.</p>
+                    <p className="content-after-head">
+                        {translate.head2[language]}
+                    </p>
+                    <p className="content-after-head">
+                        {translate.text2[language]}
+                    </p>
                 </div>
             </div>
-            
 
-            <div className="second-blcok centered" style={{backgroundImage:'url(/src/rumunia/bg-pass-rumun-blue-min.jpg)'}}>
+            <div
+                className="second-blcok centered"
+                style={{
+                    backgroundImage:
+                        "url(/src/rumunia/bg-pass-rumun-blue-min.jpg)",
+                }}
+            >
                 <div className="container">
-                    <h1>Кто может получить паспорт Румынии</h1>
-                    <p className="content-after-head" style={{color:'#fff'}}>В соответствии с действующими нормами законодательства Румынии, предусматривается несколько путей для получения румынского паспорта:</p>
+                    <h1>{translate.whoCan.head[language]}</h1>
+                    <p className="content-after-head" style={{ color: "#fff" }}>
+                        {translate.whoCan.afterHead[language]}
+                    </p>
                     <ul>
                         <li>
-                            <span className="count"> <span> 1</span></span> 
+                            <span className="count">
+                                {" "}
+                                <span> 1</span>
+                            </span>
                             <div className="block">
-                                <div className="text">Инвестиции в нынешний бизнес или собственное дело. Румынское законодательство дает возможность оформить паспорт Румынии в обмен на денежные инвестиции в экономику страны. Инвестиционные вложения – не единственное требование к заявителю. Также нужно что бы была безупречная репутация, подтверждение платежеспособности и источников дохода.</div>
+                                <div className="text">
+                                    {translate.whoCan.text1[language]}
+                                </div>
                             </div>
                         </li>
 
-
                         <li>
-                            <span className="count"><span> 2</span></span> 
+                            <span className="count">
+                                <span> 2</span>
+                            </span>
                             <div className="block">
-                                <div className="text">Натурализация: для получения паспорта по программе натурализации необходимо постоянно проживать на территории страны, а также пройти квалификационный период (предварительно оформить ВНЖ и ПМЖ). В качестве основания для натурализации считается официальный брак с гражданином Румынии, наличие права на официальное трудоустройство.</div>
+                                <div className="text">
+                                    {translate.whoCan.text2[language]}
+                                </div>
                             </div>
                         </li>
 
-
                         <li>
-                            <span className="count"><span> 3</span></span> 
+                            <span className="count">
+                                <span> 3</span>
+                            </span>
                             <div className="block">
-                                <div className="text">Репатриация: действующим законодательством предусматривается способ оформления паспорта посредством программы репатриации. Необходимым условием считается наличие родственных связей с гражданами Румынии либо утрата официального статуса по независимым от заявителя причинам. Эта программа распространяется на лиц, которые до 22 декабря 1989 года проживали на территории Румынии, а также их прямых потомков.</div>
+                                <div className="text">
+                                    {translate.whoCan.text3[language]}
+                                </div>
                             </div>
                         </li>
                     </ul>
-                    <h2>Наша команда проконсультирует Вас насчет того, как найти документы, подтверждающие Вашу принадлежность к румынскому народу. С нашей помощью Вы сможете успешно иммигрировать в Румынию и ЕС.</h2>
+                    <h2>{translate.whoCan.head2[language]}</h2>
                 </div>
             </div>
-            
 
-
-            <div className="text-block centered" style={{background: '#f1f1f1', padding: '40px 0'}}>
+            <div
+                className="text-block centered"
+                style={{ background: "#f1f1f1", padding: "40px 0" }}
+            >
                 <div className="container">
-                    <h1>Как мы помогаем наши клиентам</h1>
-                    <p>Юристы компании Immigration подробно консультируют о процедуре иммиграции в Румынию, четко объясняют алгоритм сбора документов и подготовки досье, а также предоставляют профессиональную поддержку в случае возникновения любых дополнительных вопросов у клиента.</p>
-                    <p>Основными документами для формирования досье являются:</p>
+                    <h1>{translate.ourHelp.head[language]}</h1>
+                    <p>{translate.ourHelp.text1[language]}</p>
+                    <p>{translate.ourHelp.text2[language]}</p>
                     <div className="img">
                         <img src="/src/rumunia/docs1111.jpg" alt="" />
                     </div>
-                    <p>Наши юристы детально расскажут вам о том, как составить заявление на имя компетентных органов Румынии, получить справку о несудимости и восстановить необходимый документ в случае его утраты.</p>
-                    <p>Мы предоставляем профессиональные советы насчет подготовки к сдаче присяги и изучения румынского языка на базовом уровне. Также Вы можете использовать наш курс, который расположен по этой ссылке. Этот курс составлен опытными преподавателями с учетом тем и вопросов, которые могут быть на процедуре принятия присяги на верность Румынии</p>
+                    <p>{translate.ourHelp.text3[language]}</p>
+                    <p>{translate.ourHelp.text4[language]}</p>
                     <div className="img">
                         <img src="/src/rumunia/01.jpg" alt="" />
                     </div>
-                    <p>После получения сертификата о гражданстве Вы приступаете к изготовлению румынских документов. Наши сотрудники во всех подробностях проконсультируют насчет последовательности и аспектов процедуры оформления документов гражданина Румынии, в том числе заграничного паспорта, который предоставляет способ пересекать границы стран за пределами Евросоюза.</p>
-                    <p>Профессионалы Immigration постоянно на связи с клиентами, поэтому Вы можете обратиться к нашим представителям в комфортное для Вас время по интересующим вопросам. Мы даём неограниченное количество консультаций в течение всей процедуры по иммиграции в Румынию.</p>
+                    <p>{translate.ourHelp.text5[language]}</p>
+                    <p>{translate.ourHelp.text6[language]}</p>
                 </div>
             </div>
-
 
             <div className="text-block centered">
                 <div className="container">
-                    <h1>Как получить румынский паспорт</h1>
-                    <p>В ст.11 Закона «О гражданстве» представлены требования к заявителю, а также описана процедура того, как получить паспорт Румынии. Наши юристы подробно объяснят все законодательные аспекты для возможности иммиграции в Румынию и оформления государственного паспорта.</p>
-                    <p>Репатриантам не нужно инвестировать большие суммы в экономику и в совершенстве владеть государственным языком или ждать долгое время, чтобы легализоваться в стране. Закон о гражданстве и Конституция Румынии защищают право иностранца с подтвержденным румынским происхождением на эффективную иммиграцию и получение паспорта.</p>
+                    <h1>{translate.head3[language]}</h1>
+                    <p>{translate.text3[language]}</p>
+                    <p>{translate.text4[language]}</p>
                 </div>
             </div>
 
-
-
-
-            <div className="intro centered" style={{backgroundImage: 'url(/src/rumunia/bg-form1-pass-rumun-min.jpg)'}}>
+            <div
+                className="intro centered"
+                style={{
+                    backgroundImage:
+                        "url(/src/rumunia/bg-form1-pass-rumun-min.jpg)",
+                }}
+            >
                 <div className="container">
                     <div className="left">
                         <img src="/src/poland/contact-col-bg.png" alt="" />
-                        <h1>Юридические консультации насчет успешной иммиграции в Румынию</h1>
+                        <h1>{translate.consult[language]}</h1>
                     </div>
                     <div className="right">
-                        <LeadRequest/>
-
+                        <LeadRequest />
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default RumuniaPassportFirstBlock;
